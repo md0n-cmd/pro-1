@@ -6,7 +6,7 @@ const GenreList = ({ onSelectGenre }: Props) => {
   const genres = [
     "Action", "Indie", "Adventure", "RPG", "Strategy", 
     "Shooter", "Casual", "Simulation", "Puzzle", "Arcade", 
-    "Platformer", "Racing", "Massively Multiplayer", "Sports", "Fighting"
+    "Platformer", "Racing", "Sports", "Fighting"
   ];
 
   return (
