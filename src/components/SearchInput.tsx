@@ -14,11 +14,18 @@ const SearchInput = ({ onSearch }: Props) => {
       if (ref.current) onSearch(ref.current.value);
     }}>
       <input 
-        ref={ref}
-        type="text" 
-        placeholder="Search games..." 
-        style={{ width: '100%', borderRadius: '20px', padding: '10px 20px', border: '1px solid #555', background: '#222', color: 'white' }}
-      />
+  ref={ref}
+  type="text" 
+  placeholder="Search games..." 
+  style={{ 
+    width: '100%', 
+    borderRadius: '20px', 
+    padding: '10px 20px', 
+    border: '1px solid var(--border)', 
+    background: var(--bg-sidebar),     
+    color: 'var(--text-main)'          
+  }}
+/>
     </form>
   );
 };
