@@ -7,23 +7,26 @@
 }
 
 .card {
-  background-color: #202020;
+  /* Use the sidebar background or main background variable */
+  background-color: var(--bg-sidebar); 
   border-radius: 12px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  /* Remove any fixed width/height here to let them stretch */
   width: 100%; 
   transition: transform 0.2s ease;
+  /* Add a border so cards are visible against white backgrounds */
+  border: 1px solid var(--border); 
 }
 
+.info {
+  padding: 15px;
+  /* Ensure the info section matches the card background */
+  background: var(--bg-sidebar); 
+}
 .image {
   width: 100%;
   aspect-ratio: 16 / 9; /* This keeps the "stretch" proportional */
   object-fit: cover;
 }
 
-.info {
-  padding: 15px;
-  background: #202020;
-}
