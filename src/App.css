@@ -1,0 +1,72 @@
+/* --- 1. Theme Variables --- */
+:root[data-theme='light'] {
+  --bg-main: #ffffff;
+  --bg-sidebar: #f9f9f9;
+  --text-main: #1a1a1a; /* Dark text for light mode */
+  --border: #e0e0e0;
+}
+
+:root[data-theme='dark'] {
+  --bg-main: #111111;
+  --bg-sidebar: #151515;
+  --text-main: #ffffff; /* White text for dark mode */
+  --border: #333333;
+}
+
+/* --- 2. Global Reset & Body --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-main) !important;
+  color: var(--text-main) !important;
+  font-family: 'Inter', system-ui, sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+/* --- 3. THE MAGIC FIX FOR TEXT --- */
+/* This forces every title, link, and text bit to use the variable */
+.app-container *, 
+.app-container h1, 
+.app-container h2, 
+.app-container h3, 
+.app-container p {
+  color: var(--text-main) !important;
+}
+
+/* --- 4. Layout --- */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  background-color: var(--bg-main);
+  border-bottom: 1px solid var(--border);
+}
+
+.main-layout {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: var(--bg-sidebar);
+  border-right: 1px solid var(--border);
+  padding: 20px;
+}
+
+.game-content {
+  flex-grow: 1;
+  background-color: var(--bg-main);
+  padding: 20px;
+}

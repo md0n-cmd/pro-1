@@ -1,0 +1,29 @@
+.grid {
+  display: grid;
+  /* This says: create as many columns as possible that are at least 250px wide */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+  width: 100%; /* Ensure the grid takes all available space */
+}
+
+.card {
+  background-color: #202020;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  /* Remove any fixed width/height here to let them stretch */
+  width: 100%; 
+  transition: transform 0.2s ease;
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* This keeps the "stretch" proportional */
+  object-fit: cover;
+}
+
+.info {
+  padding: 15px;
+  background: #202020;
+}
